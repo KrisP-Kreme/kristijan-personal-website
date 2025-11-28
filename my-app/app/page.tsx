@@ -12,45 +12,69 @@ export default function Home() {
             </h1>
             <div className="grid grid-cols-2 sm:grid-cols-2 w-full">
               <Link href="/project1">
-                <Card className="p-8 w-140 rounded-none b-80 ease-in-out hover:brightness-12">
-                  <CardHeader>
-                    <CardTitle>Project</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>This is a card from shadcn</p>
-                  </CardContent>
+                <Card className="p-8 w-160 relative h-50 overflow-hidden rounded-none group cursor-pointer">
+                  <Image
+                    src="/1200px-HK_Welcome_Image.png"
+                    alt="Project"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/80 transition duration-500" />
+
+                  <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 className="text-2xl font-bold">OpenAgar</h3>
+                  </div>
                 </Card>
               </Link>
-              <Link href="/project2">
-                <Card className="p-8 w-140 rounded-none b-80 ease-in-out hover:brightness-12">
-                  <CardHeader>
-                    <CardTitle>Project</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>This is a card from shadcn</p>
-                  </CardContent>
+              <Link href="/project1">
+                <Card className="p-8 w-160 relative h-50 overflow-hidden rounded-none group cursor-pointer">
+                  <Image
+                    src="/1200px-HK_Welcome_Image.png"
+                    alt="Project"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/80 transition duration-500" />
+
+                  <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 className="text-2xl font-bold">Banking Application</h3>
+                  </div>
                 </Card>
               </Link>
-              <Link href="/project3">
-                <Card className="p-8 w-140 rounded-none b-80 ease-in-out hover:brightness-12">
-                  <CardHeader>
-                    <CardTitle>Project</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>This is a card from shadcn</p>
-                  </CardContent>
+              <Link href="/project1">
+                <Card className="p-8 w-160 relative h-50 overflow-hidden rounded-none group cursor-pointer">
+                  <Image
+                    src="/1200px-HK_Welcome_Image.png"
+                    alt="Project"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/80 transition duration-500" />
+
+                  <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 className="text-2xl font-bold">Email Generation Platform</h3>
+                  </div>
                 </Card>
               </Link>
-              <Link href="/project4">
-                <Card className="p-8 w-140 rounded-none b-80 ease-in-out hover:brightness-12">
-                  <CardHeader>
-                    <CardTitle>Project</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p>This is a card from shadcn</p>
-                  </CardContent>
+              <Link href="/project1">
+                <Card className="p-8 w-160 relative h-50 overflow-hidden rounded-none group cursor-pointer">
+                  <Image
+                    src="/1200px-HK_Welcome_Image.png"
+                    alt="Project"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/80 transition duration-500" />
+
+                  <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 className="text-2xl font-bold">Project 1</h3>
+                    <p className="opacity-90">This is a card from shadcn</p>
+                  </div>
                 </Card>
-              </Link> 
+              </Link>
             </div>
           </div>
         </section>
