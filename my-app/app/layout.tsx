@@ -24,11 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className ="h-full bg-foreground">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+        <main className="bg-foreground flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <NavBar />
         </main>
         {children}
