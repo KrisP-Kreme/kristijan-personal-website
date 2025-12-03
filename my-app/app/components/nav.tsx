@@ -19,7 +19,7 @@ const navItems = {
 
 export function NavBar() {
   return (
-    <div className="w-full grid grid-cols-3 items-center px-6 fixed top-0">
+    <div className="w-full grid grid-cols-3 items-center px-6 fixed top-0 bg-foreground py-4">
 
       <nav className="flex space-x-4 px-6">
         {Object.entries(navItems).map(([path, { name }]) => (
