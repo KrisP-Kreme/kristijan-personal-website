@@ -4,7 +4,6 @@ export default function OpenAgar() {
     return (
         <div className="flex flex-col min-h-screen items-center py-50 justify-center bg-foreground font-sans dark:bg-foreground">
 
-
             <h1 className="text-background max-w text-5xl font-bold mb-10">
                 OpenAgar Project Page
             </h1>
@@ -12,6 +11,7 @@ export default function OpenAgar() {
             <div className="max-w-3xl w-full bg-background/10 p-6 rounded-lg shadow-lg">
 
             <h2 className="text-3xl font-semibold text-background mb-4">OpenAgar</h2>
+            <img src="/agartest4.png" alt="OpenAgar Screenshot" className="w-full h-auto mb-4 rounded" />
             <p className="text-background mb-4">
                 OpenAgar is an Agar.io clone developed in Python, featuring AI-controlled bots that simulate real player behavior. The project showcases skills in game development, AI programming, and network communication.
             </p>

@@ -32,6 +32,17 @@ export default function OpenAgarPage() {
         <a href="https://github.com/yourusername/openagar" className="text-blue-500 hover:underline">
           GitHub Repository
         </a>
+                                <section id="agar-section">
+            <h2>OpenAgar Demo</h2>
+
+            <iframe
+                id="openagar-frame"
+                src="https://keen-radiance-production.up.railway.app"
+                width="100%"
+                height="900"
+                style={{ border: "none" }}
+            ></iframe>
+            </section>
       </div>
     </div>
   );
