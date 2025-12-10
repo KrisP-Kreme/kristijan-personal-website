@@ -32,8 +32,15 @@ export default function OpenAgarPage() {
         <a href="https://github.com/yourusername/openagar" className="text-blue-500 hover:underline">
           GitHub Repository
         </a>
-                                <section id="agar-section">
+          <section id="agar-section">
             <h2>OpenAgar Demo</h2>
+
+            <button
+              onClick={startBots}
+              className="bg-blue-600 text-white px-6 py-3 mb-6 rounded hover:bg-blue-700"
+            >
+              Start Bots & Play
+            </button>
 
             <iframe
                 id="openagar-frame"
@@ -42,8 +49,20 @@ export default function OpenAgarPage() {
                 height="900"
                 style={{ border: "none" }}
             ></iframe>
-            </section>
+          </section>
       </div>
     </div>
   );
 }
+
+async function startBots() {
+  await fetch("/api/start-bots", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ count: 6 })
+  });
+  alert("Bots started! Refresh the game page.");
+}
+
