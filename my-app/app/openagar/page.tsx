@@ -17,17 +17,22 @@ export default function OpenAgarPage() {
   }
 
   useEffect(() => {
-    const stopBots = async () => {
-      await fetch("/api/stop-bots", { method: "POST" });
+    const stopBots = () => {
+      const url = "/api/stop-bots";
+      navigator.sendBeacon(url, JSON.stringify({}));
     };
 
-    window.addEventListener("beforeunload", stopBots);
+    window.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") stopBots();
+    });
+
+    window.addEventListener("pagehide", stopBots);
 
     return () => {
-      window.removeEventListener("beforeunload", stopBots);
       stopBots();
     };
   }, []);
+
 
   return (
     <div className="flex flex-col min-h-screen items-center py-50 justify-center bg-foreground font-sans dark:bg-foreground">
