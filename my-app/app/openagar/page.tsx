@@ -16,22 +16,21 @@ export default function OpenAgarPage() {
     setStarted(true);
   }
 
-  useEffect(() => {
-    const stopBots = () => {
-      const url = "/api/stop-bots";
-      navigator.sendBeacon(url, JSON.stringify({}));
-    };
+    useEffect(() => {
+      const stopBots = () => {
+        navigator.sendBeacon("/api/stop-bots");
+      };
 
-    window.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") stopBots();
-    });
+      window.addEventListener("pagehide", stopBots);
+      window.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") stopBots();
+      });
 
-    window.addEventListener("pagehide", stopBots);
-
-    return () => {
-      stopBots();
-    };
-  }, []);
+      return () => {
+        stopBots();
+        window.removeEventListener("pagehide", stopBots);
+      };
+    }, []);
 
 
   return (
