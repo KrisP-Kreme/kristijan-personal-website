@@ -6,15 +6,38 @@ export default function OpenAgarPage() {
 
   const [started, setStarted] = useState(false);
 
-  async function startBots() {
-    await fetch("/api/start-bots", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ count: 6 }),
-    });
+    async function startBots() {
+      await fetch("/api/start-bots", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ count: 6 }),
+      });
 
-    setStarted(true);
-  }
+      setStarted(true);
+
+      // ---- SOCKET HEARTBEAT FIX ----
+      const iframe = document.getElementById("openagar-frame");
+
+      iframe?.addEventListener("load", () => {
+        const socket = iframe?.contentWindow?.socket;
+
+        if (!socket) {
+          console.warn("⚠️ No socket found!");
+          return;
+        }
+
+        socket.on("connect", () => {
+          console.log("SOCKET CONNECTED ✔️");
+        });
+
+        socket.heartbeat = () => {
+          if (socket.connected) {
+            socket.emit("0");
+          }
+        };
+      });
+    }
+  
 
     useEffect(() => {
       const stopBots = () => {

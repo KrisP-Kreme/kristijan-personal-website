@@ -1,8 +1,10 @@
-export async function POST(request: Request) {
+export async function POST() {
   await fetch(process.env.BOT_SERVICE_URL + "/stop-bots", {
     method: "POST",
-    headers: { "Content-Type": "application/json" }
+    headers: {
+      "Authorization": `Bearer ${process.env.BOT_API_TOKEN}`
+    }
   });
 
-  return new Response("bots stopped");
+  return new Response("Bots stopped");
 }
