@@ -65,4 +65,3 @@ async function startBots() {
   });
   alert("Bots started! Refresh the game page.");
 }
-
