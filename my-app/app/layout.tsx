@@ -18,9 +18,8 @@ export const metadata: Metadata = {
   title: "Kristijan Popordanoski - Software Developer",
   description: "Kristijan Popordanoski portfolio and resume",
   icons: {
-    icon: '/main_logo.jpg',
-    shortcut: '/main_logo.jpg'
-  }
+    icon: "/site_logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,10 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full bg-foreground">
-      <head>
-        <link rel="icon" href="/main_logo.jpg" />
-        <link rel="shortcut icon" href="/main_logo.jpg" />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="bg-foreground min-h-screen flex flex-col">
           <NavBar />
