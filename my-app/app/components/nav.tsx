@@ -43,13 +43,21 @@ export function NavBar() {
           </nav>
         </div>
 
-        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
-          <div className="relative w-36 h-12 sm:w-44 sm:h-14">
+          {/* Mobile logo (top center) */}
+          <div className="absolute left-1/2 top-3 -translate-x-1/2 z-40 md:hidden pointer-events-none">
             <Link href="/" className="pointer-events-auto block">
-              <Image src="/logo.gif" alt="Logo" fill className="object-contain" />
+              <img src="/logo.gif" alt="Logo" className="h-12 w-auto" />
             </Link>
           </div>
-        </div>
+
+          {/* Desktop logo (centered in navbar) */}
+          <div className="hidden md:block pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+            <div className="relative w-44 h-14">
+              <Link href="/" className="pointer-events-auto block">
+                <Image src="/logo.gif" alt="Logo" fill className="object-contain" priority />
+              </Link>
+            </div>
+          </div>
 
         <div className="flex items-center justify-end gap-4">
           <div className="hidden md:flex items-center gap-4">
