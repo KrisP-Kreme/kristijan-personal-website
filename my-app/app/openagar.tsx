@@ -31,7 +31,7 @@ export default function OpenAgar() {
             <a href="https://github.com/yourusername/openagar" className="text-blue-500 hover:underline">
                 GitHub Repository
             </a>
-                        <section id="agar-section">
+            <section id="agar-section">
             <h2>OpenAgar Demo</h2>
 
             <iframe

@@ -5,9 +5,10 @@ import { ChevronDown } from "lucide-react";
 interface ScrollArrowProps {
   targetId?: string;
   ariaLabel?: string;
+  className?: string;
 }
 
-export function ScrollArrow({ targetId = "about", ariaLabel = "Scroll down" }: ScrollArrowProps) {
+export function ScrollArrow({ targetId = "about", ariaLabel = "Scroll down", className = "" }: ScrollArrowProps) {
   const handleClick = () => {
     document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -23,7 +24,7 @@ export function ScrollArrow({ targetId = "about", ariaLabel = "Scroll down" }: S
           animation: bounce 2s infinite;
         }
       `}</style>
-      <div className="my-12 flex justify-center">
+      <div className={`my-12 flex justify-center ${className}`}>
         <button
           onClick={handleClick}
           className="text-background hover:text-neutral-400 transition-colors cursor-pointer"
