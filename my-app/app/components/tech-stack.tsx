@@ -23,8 +23,8 @@ export function TechStack() {
     <div className="my-16 w-full">
       <style>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-0.75rem); }
         }
         .float-animation {
           animation: float 3s ease-in-out infinite;
@@ -44,7 +44,7 @@ export function TechStack() {
             >
               <div className="flex flex-col items-center gap-2 group cursor-pointer">
                 <div className="p-4 rounded-lg bg-neutral-800/50 group-hover:bg-neutral-700 transition-all duration-300 transform group-hover:scale-110">
-                  <Icon size={32} color={tech.color} />
+                  <Icon size="2rem" color={tech.color} />
                 </div>
                 <p className="text-background text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   {tech.label}

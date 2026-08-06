@@ -26,7 +26,7 @@ export function Footer() {
             className="text-background transition hover:text-neutral-300"
             aria-label="GitHub"
           >
-            <FiGithub size={20} />
+            <FiGithub size="1.25rem" />
           </a>
           <a
             href="https://linkedin.com/in/kristijanpopordanoski"
@@ -35,14 +35,14 @@ export function Footer() {
             className="text-background transition hover:text-neutral-300"
             aria-label="LinkedIn"
           >
-            <FiLinkedin size={20} />
+            <FiLinkedin size="1.25rem" />
           </a>
           <a
             href="mailto:kris.popor@gmail.com"
             className="text-background transition hover:text-neutral-300"
             aria-label="Email"
           >
-            <FiMail size={20} />
+            <FiMail size="1.25rem" />
           </a>
         </div>
       </div>

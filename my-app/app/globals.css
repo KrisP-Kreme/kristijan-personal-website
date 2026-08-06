@@ -172,3 +172,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Keep the more spacious 80% composition on desktop without using CSS zoom. */
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}

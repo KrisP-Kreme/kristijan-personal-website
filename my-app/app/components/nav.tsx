@@ -25,7 +25,7 @@ export function NavBar() {
             className="flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 text-background transition hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            {menuOpen ? <FiX size="1.5rem" /> : <FiMenu size="1.5rem" />}
           </button>
 
           <nav className="hidden md:flex items-center gap-4">
@@ -68,7 +68,7 @@ export function NavBar() {
               className="text-background transition hover:text-neutral-500 dark:hover:text-neutral-200"
               aria-label="GitHub"
             >
-              <FiGithub size={20} />
+              <FiGithub size="1.25rem" />
             </a>
             <a
               href="https://linkedin.com/in/kristijanpopordanoski"
@@ -77,14 +77,14 @@ export function NavBar() {
               className="text-background transition hover:text-neutral-500 dark:hover:text-neutral-200"
               aria-label="LinkedIn"
             >
-              <FiLinkedin size={20} />
+              <FiLinkedin size="1.25rem" />
             </a>
             <a
               href="mailto:kris.popor@gmail.com"
               className="text-background transition hover:text-neutral-500 dark:hover:text-neutral-200"
               aria-label="Email"
             >
-              <FiMail size={20} />
+              <FiMail size="1.25rem" />
             </a>
           </div>
         </div>
@@ -114,7 +114,7 @@ export function NavBar() {
                 className="text-background transition hover:text-neutral-500"
                 aria-label="GitHub"
               >
-                <FiGithub size={20} />
+                <FiGithub size="1.25rem" />
               </a>
               <a
                 href="https://linkedin.com/in/kristijanpopordanoski"
@@ -123,14 +123,14 @@ export function NavBar() {
                 className="text-background transition hover:text-neutral-500"
                 aria-label="LinkedIn"
               >
-                <FiLinkedin size={20} />
+                <FiLinkedin size="1.25rem" />
               </a>
               <a
                 href="mailto:kris.popor@gmail.com"
                 className="text-background transition hover:text-neutral-500"
                 aria-label="Email"
               >
-                <FiMail size={20} />
+                <FiMail size="1.25rem" />
               </a>
             </div>
           </div>

@@ -45,7 +45,7 @@ export function HeroVisual() {
 
   return (
     <div className="my-20 w-full flex justify-center items-center">
-      <style>{`@keyframes orbit { from { transform: rotate(0deg) translateX(140px) rotate(0deg); } to { transform: rotate(360deg) translateX(140px) rotate(-360deg); } }`}</style>
+      <style>{`@keyframes orbit { from { transform: rotate(0deg) translateX(8.75rem) rotate(0deg); } to { transform: rotate(360deg) translateX(8.75rem) rotate(-360deg); } }`}</style>
 
       <motion.div
         ref={containerRef}
@@ -81,10 +81,10 @@ export function HeroVisual() {
             style={{
               top: '50%',
               left: '50%',
-              transformOrigin: '0px 0px',
+              transformOrigin: '0 0',
               animation: `orbit 8s linear infinite`,
-              marginTop: '-4px',
-              marginLeft: '-4px',
+              marginTop: '-0.25rem',
+              marginLeft: '-0.25rem',
               animationDelay: `-${i * 2.67}s`,
             }}
           />

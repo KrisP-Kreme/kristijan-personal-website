@@ -18,7 +18,7 @@ export function ScrollArrow({ targetId = "about", ariaLabel = "Scroll down", cla
       <style>{`
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(8px); }
+          50% { transform: translateY(0.5rem); }
         }
         .animate-bounce-custom {
           animation: bounce 2s infinite;
@@ -30,7 +30,7 @@ export function ScrollArrow({ targetId = "about", ariaLabel = "Scroll down", cla
           className="text-background hover:text-neutral-400 transition-colors cursor-pointer"
           aria-label={ariaLabel}
         >
-          <ChevronDown size={40} className="animate-bounce-custom" />
+          <ChevronDown size="2.5rem" className="animate-bounce-custom" />
         </button>
       </div>
     </>
